@@ -13,12 +13,15 @@ export const skillCategories = [
       "React Query",
       "Jest",
       "GraphQL",
+      "Redux Toolkit",
+      "React Native",
+      "Expo",
     ],
   },
   {
     icon: Database,
     title: "Backend",
-    skills: ["Python", "FastAPI", "Node.js", "Express", "MongoDB", "REST APIs", "PostgreSQL", "Docker", "Vercel"],
+    skills: ["Python", "FastAPI", "Node.js", "Express", "MongoDB", "REST APIs", "PostgreSQL", "Docker"],
   },
   {
     icon: Palette,
@@ -28,7 +31,17 @@ export const skillCategories = [
   {
     icon: Wrench,
     title: "Tools",
-    skills: ["Figma", "Git", "Vite", "Postman", "VS Code", ],
+    skills: ["Figma", "Git", "Vite", "Postman", "VS Code", "TDD", "AWS", "Vercel" ],
+  },
+] as const;
+
+export const studies = [
+  {
+    title: "Master in Project Management",
+    institution: "De Montfort University",
+    period: "2023 - 2024",
+    description:
+      "Master in Project Management from De Montfort University, UK. ",
   },
 ] as const;
 

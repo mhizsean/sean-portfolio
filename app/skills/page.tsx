@@ -1,17 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { skillCategories } from "@/constants/skills";
-
-const studies = [
-  {
-    title: "Master in Project Management",
-    institution: "De Montfort University",
-    period: "2023 - 2024",
-    description:
-      "Master in Project Management from De Montfort University, UK. I have learned about the principles of project management, the different types of projects, the different stages of a project, the different roles in a project, the different tools and techniques used in project management, and the different frameworks and standards used in project management.",
-  },
-];
+import { skillCategories, studies } from "@/constants/skills";
 
 export default function SkillsPage() {
   return (
