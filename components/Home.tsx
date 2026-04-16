@@ -11,7 +11,7 @@ import {
 } from "framer-motion";
 import { socialLinks } from "@/constants/socialLinks";
 
-export default function HomeLeftSection() {
+export default function Home() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const reduceMotion = useReducedMotion();
 

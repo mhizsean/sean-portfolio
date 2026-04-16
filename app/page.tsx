@@ -1,9 +1,9 @@
-import HomeLeftSection from "@/components/HomeLeftSection";
+import Home from "@/components/Home";
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="min-h-screen">
-      <HomeLeftSection />
+      <Home />
     </main>
   );
 }
