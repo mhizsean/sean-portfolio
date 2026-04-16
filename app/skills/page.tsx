@@ -1,38 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code, Palette, Database, Wrench } from "lucide-react";
-
-const skillCategories = [
-  {
-    icon: Code,
-    title: "Frontend",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-    ],
-  },
-  {
-    icon: Database,
-    title: "Backend",
-    skills: ["Node.js", "Express", "MongoDB", "REST APIs"],
-  },
-  {
-    icon: Palette,
-    title: "Design",
-    skills: ["UI/UX Design", "Figma", "Responsive Design", "User Research"],
-  },
-  {
-    icon: Wrench,
-    title: "Tools",
-    skills: ["Git", "Vite", "Vitest", "Postman", "VS Code"],
-  },
-];
+import { skillCategories } from "@/constants/skills";
 
 const studies = [
   {
