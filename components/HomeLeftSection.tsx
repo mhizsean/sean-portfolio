@@ -1,6 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
+import Image from "next/image";
 import {
   motion,
   useMotionTemplate,
@@ -63,10 +64,11 @@ export default function HomeLeftSection() {
   return (
     <div
       ref={sectionRef}
-      className="relative flex h-full min-h-[50vh] w-full flex-col overflow-hidden border-r border-dark-border bg-dark-bg md:min-h-screen md:w-1/2"
+      className="relative flex min-h-screen w-full flex-col overflow-hidden bg-dark-bg"
       onMouseMove={handleMove}
       onMouseLeave={handleLeave}
     >
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-accent-secondary/10 via-transparent to-accent-primary/5" />
       {!reduceMotion && (
         <>
           <motion.div
@@ -88,9 +90,9 @@ export default function HomeLeftSection() {
         />
       )}
 
-      <div className="relative z-10 flex h-full min-h-0 flex-1 flex-col justify-between p-8 md:p-12 lg:p-16">
+      <div className="relative z-10 flex min-h-screen flex-1 flex-col">
         <motion.div
-          className="flex flex-col gap-6"
+          className="absolute left-0 top-0 z-20 flex flex-col gap-6 p-8 md:p-12 lg:p-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -116,38 +118,58 @@ export default function HomeLeftSection() {
           })}
         </motion.div>
 
-        <motion.div
-          className="space-y-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <motion.h1
-            className="text-4xl font-bold text-white md:text-5xl lg:text-6xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+        <div className="flex flex-1 flex-col items-center justify-center px-8 py-24 text-center md:px-12 md:py-28 lg:px-16">
+          <motion.div
+            className="flex flex-col items-center space-y-8"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Esther Adeyi
-          </motion.h1>
-          <motion.p
-            className="text-lg text-gray-400 md:text-xl"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-          >
-            Software Engineer
-          </motion.p>
-          <motion.p
-            className="max-w-md text-sm text-gray-500 md:text-base"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.9 }}
-          >
-            with over 6 years of experience building software solutions for
-            various industries
-          </motion.p>
-        </motion.div>
+            <div className="relative mx-auto h-30 w-30 overflow-hidden rounded-full border-2 border-accent-primary/30 shadow-lg md:h-50 md:w-50">
+              <Image
+                src="/images/profile.jpg"
+                alt="Esther Adeyi"
+                className="object-cover object-center"
+                width={200}
+                height={200}
+                priority
+              />
+            </div>
+
+            <motion.div
+              className="mx-auto max-w-md space-y-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+            >
+              <motion.h1
+                className="text-4xl font-bold text-white md:text-5xl lg:text-6xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+              >
+                Esther Adeyi
+              </motion.h1>
+              <motion.p
+                className="text-lg text-gray-400 md:text-xl"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.65 }}
+              >
+                Software Engineer
+              </motion.p>
+              <motion.p
+                className="text-sm text-gray-500 md:text-base"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+              >
+                with over 6 years of experience building software solutions for
+                various industries
+              </motion.p>
+            </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
