@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
@@ -25,16 +25,14 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-            I am a passionate frontend developer in training, dedicated to creating beautiful and functional web experiences. 
-            My journey in web development began with a deep curiosity about how digital interfaces come to life.
+            I am a passionate frontend developer in training, dedicated to
+            creating beautiful and functional web experiences. My journey in web
+            development began with a deep curiosity about how digital interfaces
+            come to life.
           </p>
-          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-            Through my studies at CEI Valencia, I've gained comprehensive knowledge in web development, UX, and UI design. 
-            I believe in writing clean, scalable code and creating user-centered designs that solve real problems.
-          </p>
+
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and continuously 
-            learning to stay at the forefront of web development trends.
+            here also
           </p>
         </motion.div>
 
@@ -46,17 +44,19 @@ export default function AboutPage() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {[
-            { label: 'Projects Completed', value: '3+' },
-            { label: 'Technologies', value: '10+' },
-            { label: 'Years Learning', value: '1+' },
+            { label: "Projects Completed", value: "3+" },
+            { label: "Technologies", value: "10+" },
+            { label: "Years Learning", value: "1+" },
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
               className="bg-dark-card border border-dark-border rounded-lg p-6 text-center"
-              whileHover={{ borderColor: '#d4af37', scale: 1.05 }}
+              whileHover={{ borderColor: "#d4af37", scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-4xl font-bold text-accent-primary mb-2">{stat.value}</div>
+              <div className="text-4xl font-bold text-accent-primary mb-2">
+                {stat.value}
+              </div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
           ))}

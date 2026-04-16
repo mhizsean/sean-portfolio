@@ -1,14 +1,22 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import { Mail, Send, Github, Linkedin, FileText, MapPin, Phone } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import {
+  Mail,
+  Send,
+  Github,
+  Linkedin,
+  FileText,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -18,21 +26,31 @@ export default function ContactPage() {
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      alert('Thank you for your message! I will get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
+      alert("Thank you for your message! I will get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
     }, 1000);
   };
 
   const contactMethods = [
-    { icon: Mail, label: 'Email', value: 'your.email@example.com', href: 'mailto:your.email@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, label: 'Location', value: 'Valencia, Spain', href: '#' },
+    {
+      icon: Mail,
+      label: "Email",
+      value: "your.email@example.com",
+      href: "mailto:your.email@example.com",
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+1 (555) 123-4567",
+      href: "tel:+15551234567",
+    },
+    { icon: MapPin, label: "Location", value: "Valencia, Spain", href: "#" },
   ];
 
   const socialLinks = [
-    { icon: Github, label: 'Github', href: '#' },
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
-    { icon: FileText, label: 'CV', href: '#' },
+    { icon: Github, label: "Github", href: "#" },
+    { icon: Linkedin, label: "LinkedIn", href: "#" },
+    { icon: FileText, label: "CV", href: "#" },
   ];
 
   return (
@@ -47,7 +65,8 @@ export default function ContactPage() {
           Contact
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl">
-          Let's connect! Whether you have a project in mind or just want to chat about web development, I'd love to hear from you.
+          Let&apos;s connect! Whether you have a project in mind or just want to
+          chat about web development, I&apos;d love to hear from you.
         </p>
       </motion.div>
 
@@ -63,41 +82,56 @@ export default function ContactPage() {
           <h2 className="text-2xl font-bold mb-6">Send a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm text-gray-400 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm text-gray-400 mb-2"
+              >
                 Name
               </label>
               <input
                 type="text"
                 id="name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 required
                 className="w-full bg-dark-surface border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-primary transition-colors"
                 placeholder="Your name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm text-gray-400 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm text-gray-400 mb-2"
+              >
                 Email
               </label>
               <input
                 type="email"
                 id="email"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 required
                 className="w-full bg-dark-surface border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-primary transition-colors"
                 placeholder="your.email@example.com"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm text-gray-400 mb-2">
+              <label
+                htmlFor="message"
+                className="block text-sm text-gray-400 mb-2"
+              >
                 Message
               </label>
               <textarea
                 id="message"
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
                 required
                 rows={6}
                 className="w-full bg-dark-surface border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-primary transition-colors resize-none"
@@ -116,7 +150,11 @@ export default function ContactPage() {
                   <motion.div
                     className="w-5 h-5 border-2 border-dark-bg border-t-transparent rounded-full"
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                    transition={{
+                      duration: 1,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                   />
                   Sending...
                 </>
@@ -190,7 +228,10 @@ export default function ContactPage() {
                     whileHover={{ scale: 1.05, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Icon className="text-gray-400 group-hover:text-accent-primary transition-colors" size={20} />
+                    <Icon
+                      className="text-gray-400 group-hover:text-accent-primary transition-colors"
+                      size={20}
+                    />
                     <span className="text-sm text-gray-400 group-hover:text-accent-primary transition-colors">
                       {link.label}
                     </span>
@@ -210,12 +251,12 @@ export default function ContactPage() {
             <motion.div
               className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-transparent to-accent-secondary/10"
               animate={{
-                backgroundPosition: ['0% 0%', '100% 100%'],
+                backgroundPosition: ["0% 0%", "100% 100%"],
               }}
               transition={{
                 duration: 10,
                 repeat: Infinity,
-                repeatType: 'reverse',
+                repeatType: "reverse",
               }}
             />
             <div className="absolute inset-0 flex items-center justify-center">
@@ -228,10 +269,10 @@ export default function ContactPage() {
                 transition={{
                   duration: 8,
                   repeat: Infinity,
-                  ease: 'easeInOut',
+                  ease: "easeInOut",
                 }}
               >
-                Let's Work Together
+                Let&apos;s Work Together
               </motion.div>
             </div>
           </motion.div>
