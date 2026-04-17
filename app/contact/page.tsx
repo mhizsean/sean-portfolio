@@ -35,16 +35,16 @@ export default function ContactPage() {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "estherseun.adeyi@outlook.com",
+      href: "mailto:estherseun.adeyi@outlook.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+44 79 0041 8058",
+      href: "tel:+44790041805",
     },
-    { icon: MapPin, label: "Location", value: "Valencia, Spain", href: "#" },
+    { icon: MapPin, label: "Location", value: "London, UK", href: "#" },
   ];
 
   const socialLinks = [
@@ -62,17 +62,18 @@ export default function ContactPage() {
         className="mb-16"
       >
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 text-center md:text-left">
-          Contact
+          Contact Me
         </h1>
         <p className="text-gray-400 text-lg max-w-2xl">
-          Let&apos;s connect! Whether you have a project in mind or just want to
-          chat about web development, I&apos;d love to hear from you.
+          I&apos;d love to hear from you. Whether for collaboration, a job
+          opportunity, speaking engagement or just to say hi, I&apos;ll get back
+          to you as soon as possible.
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Contact Form */}
-        <motion.div
+        {/* <motion.div
           className="bg-dark-card border border-dark-border rounded-lg p-8 md:p-10"
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -166,7 +167,7 @@ export default function ContactPage() {
               )}
             </motion.button>
           </form>
-        </motion.div>
+        </motion.div> */}
 
         {/* Contact Info & Social Links */}
         <div className="space-y-8">
@@ -238,42 +239,6 @@ export default function ContactPage() {
                   </motion.a>
                 );
               })}
-            </div>
-          </motion.div>
-
-          {/* Animated Decorative Element */}
-          <motion.div
-            className="relative h-64 bg-dark-card border border-dark-border rounded-lg overflow-hidden"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-          >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-transparent to-accent-secondary/10"
-              animate={{
-                backgroundPosition: ["0% 0%", "100% 100%"],
-              }}
-              transition={{
-                duration: 10,
-                repeat: Infinity,
-                repeatType: "reverse",
-              }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <motion.div
-                className="text-6xl font-serif text-accent-primary/20"
-                animate={{
-                  scale: [1, 1.1, 1],
-                  rotate: [0, 5, -5, 0],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                Let&apos;s Work Together
-              </motion.div>
             </div>
           </motion.div>
         </div>
