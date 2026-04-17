@@ -23,8 +23,14 @@ export default function Home() {
 
   const springX = useSpring(mouseX, { stiffness, damping });
   const springY = useSpring(mouseY, { stiffness, damping });
-  const lagX = useSpring(mouseX, { stiffness: stiffness * 0.35, damping: damping * 1.15 });
-  const lagY = useSpring(mouseY, { stiffness: stiffness * 0.35, damping: damping * 1.15 });
+  const lagX = useSpring(mouseX, {
+    stiffness: stiffness * 0.35,
+    damping: damping * 1.15,
+  });
+  const lagY = useSpring(mouseY, {
+    stiffness: stiffness * 0.35,
+    damping: damping * 1.15,
+  });
 
   const glowPrimary = useMotionTemplate`radial-gradient(520px circle at ${springX}px ${springY}px, rgba(212, 175, 55, 0.16) 0%, rgba(212, 175, 55, 0.05) 38%, transparent 68%)`;
   const glowSecondary = useMotionTemplate`radial-gradient(420px circle at ${lagX}px ${lagY}px, rgba(139, 115, 85, 0.2) 0%, transparent 55%)`;
@@ -108,6 +114,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ x: 5 }}
+                target="_blank"
               >
                 <Icon size={20} />
                 <span className="text-sm uppercase tracking-wider">
