@@ -25,7 +25,7 @@ export const socialLinks: SocialLink[] = [
   {
     icon: MediumIcon,
     label: "Medium",
-    href: "https://medium.com/",
+    href: "https://medium.com/@adeyiesther01",
   },
   { icon: FileText, label: "CV", href: "#" },
 ];
