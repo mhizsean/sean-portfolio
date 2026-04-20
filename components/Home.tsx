@@ -2,6 +2,7 @@
 
 import { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   motion,
   useMotionTemplate,
@@ -10,6 +11,7 @@ import {
   useSpring,
 } from "framer-motion";
 import { socialLinks } from "@/constants/socialLinks";
+import TypingText from "@/components/TypingText";
 
 export default function Home() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -155,7 +157,13 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                Esther Adeyi
+                <TypingText
+                  text="Esther Adeyi"
+                  delayMs={450}
+                  cps={18}
+                  loop
+                  loopDelayMs={5000}
+                />
               </motion.h1>
               <motion.p
                 className="text-lg text-gray-400 md:text-xl"
@@ -163,17 +171,43 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.65 }}
               >
-                Software Engineer
+                <TypingText
+                  text="Software Engineer 💅🏾"
+                  delayMs={850}
+                  cps={18}
+                  loop
+                  loopDelayMs={5000}
+                />
               </motion.p>
               <motion.p
-                className="text-sm text-gray-500 md:text-base"
+                className="text-base text-gray-100 md:text-base"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                with over 6 years of experience building software solutions for
-                various industries
+                I build scalable, end-to-end products that deliver real user
+                impact.
               </motion.p>
+
+              <motion.div
+                className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.95, duration: 0.5 }}
+              >
+                <Link
+                  href="/projects"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-accent-primary px-6 py-3 text-sm font-semibold text-dark-bg transition-colors hover:bg-accent-primary/90"
+                >
+                  View Projects
+                </Link>
+                <Link
+                  href="/contact"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-dark-border bg-transparent px-6 py-3 text-sm font-semibold text-gray-200 transition-colors hover:bg-dark-card hover:border-accent-primary/50"
+                >
+                  Contact Me
+                </Link>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
