@@ -2,15 +2,8 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import {
-  Mail,
-  Send,
-  Github,
-  Linkedin,
-  FileText,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { Send } from "lucide-react";
+import { contactMethods, contactSocialLinks } from "@/constants/socialLinks";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -30,28 +23,6 @@ export default function ContactPage() {
       setFormData({ name: "", email: "", message: "" });
     }, 1000);
   };
-
-  const contactMethods = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "estherseun.adeyi@outlook.com",
-      href: "mailto:estherseun.adeyi@outlook.com",
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+44 79 0041 8058",
-      href: "tel:+44790041805",
-    },
-    { icon: MapPin, label: "Location", value: "London, UK", href: "#" },
-  ];
-
-  const socialLinks = [
-    { icon: Github, label: "Github", href: "#" },
-    { icon: Linkedin, label: "LinkedIn", href: "#" },
-    { icon: FileText, label: "CV", href: "#" },
-  ];
 
   return (
     <main className="min-h-screen p-6 md:p-12 lg:p-16 max-w-6xl mx-auto">
@@ -215,7 +186,7 @@ export default function ContactPage() {
           >
             <h2 className="text-2xl font-bold mb-6">Follow Me</h2>
             <div className="flex flex-wrap gap-4">
-              {socialLinks.map((link, index) => {
+              {contactSocialLinks.map((link, index) => {
                 const Icon = link.icon;
                 return (
                   <motion.a
@@ -228,6 +199,7 @@ export default function ContactPage() {
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ scale: 1.05, rotate: 5 }}
                     whileTap={{ scale: 0.95 }}
+                    target="_blank"
                   >
                     <Icon
                       className="text-gray-400 group-hover:text-accent-primary transition-colors"
