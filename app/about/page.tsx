@@ -26,7 +26,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
         >
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6 text-justify">
-            Hi!!!!!!!!!!, <br />
+            Hi!!!!!!!!!! 👋🏾, <br />
             <br />
             If you&apos;re here. I&apos;m glad. You can call me Esther. I am a
             software engineer with 6+ years of experience building digital
