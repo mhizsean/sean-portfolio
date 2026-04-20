@@ -8,6 +8,7 @@ export interface Project {
     type: 'Fullstack' | 'Frontend';
     frontendRepo?: string;
     backendRepo?: string;
+    fullStackRepo?: string;
     liveUrl?: string;
     images?: string[];
 }
@@ -21,8 +22,8 @@ export const projects: Project[] = [
         highlight: 'Project of greater technical complexity with full API REST integration and database',
         tools: ['React', 'TypeScript', 'TailwindCSS', 'React Router', 'React Query', 'API', 'Custom hooks (preload)', 'Python (FastAPI)', 'PostgreSQL', 'Docker', 'Vercel'],
         type: 'Fullstack',
-        frontendRepo: '#',
-        liveUrl: '#',
+        fullStackRepo: 'https://github.com/mhizsean/viladays',
+        liveUrl: 'https://github.com/mhizsean/viladays',
     },
     {
         id: 2,

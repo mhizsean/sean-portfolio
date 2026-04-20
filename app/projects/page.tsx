@@ -123,6 +123,18 @@ export default function ProjectsPage() {
                         <span className="text-sm">Backend Repository</span>
                       </Link>
                     )}
+                    {project.fullStackRepo && (
+                      <Link
+                        href={project.fullStackRepo}
+                        className="flex items-center gap-2 text-gray-400 hover:text-accent-primary transition-colors group"
+                      >
+                        <Code2
+                          size={18}
+                          className="group-hover:rotate-12 transition-transform"
+                        />
+                        <span className="text-sm">Full Stack Repository</span>
+                      </Link>
+                    )}
                     {project.liveUrl && (
                       <Link
                         href={project.liveUrl}
