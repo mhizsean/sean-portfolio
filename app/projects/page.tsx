@@ -58,7 +58,10 @@ export default function ProjectsPage() {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="w-full h-full bg-gradient-to-br from-accent-primary/10 to-accent-secondary/10 flex items-center justify-center">
-                    <span className="text-gray-500 text-sm">Project Image</span>
+                    <span className="text-gray-500 text-sm">
+                      {" "}
+                      Image Coming soon...
+                    </span>
                   </div>
                 </motion.div>
 
