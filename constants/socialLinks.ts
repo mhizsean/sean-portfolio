@@ -23,7 +23,7 @@ export const socialLinks: SocialLink[] = [
     label: "Medium",
     href: "https://medium.com/@mhizsean",
   },
-  { icon: FileText, label: "CV", href: "#" },
+  { icon: FileText, label: "CV", href: "https://drive.google.com/file/d/1BHYaVqy7k7_RFfk8nW0mA_k9nHK1RO_a/view?usp=sharing" },
 ];
 
 export const contactSocialLinks: SocialLink[] = [
