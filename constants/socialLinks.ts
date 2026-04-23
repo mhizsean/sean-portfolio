@@ -19,11 +19,6 @@ export const socialLinks: SocialLink[] = [
     href: "https://www.linkedin.com/in/esther-o-adeyi/",
   },
   {
-    icon: DevToIcon,
-    label: "DEV",
-    href: "https://dev.to/",
-  },
-  {
     icon: MediumIcon,
     label: "Medium",
     href: "https://medium.com/@mhizsean",

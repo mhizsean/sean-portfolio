@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Mail } from "lucide-react";
 import {
   motion,
   useMotionTemplate,
@@ -99,8 +100,16 @@ export default function Home() {
       )}
 
       <div className="relative z-10 flex min-h-screen flex-1 flex-col">
+        <Link
+          href="/contact"
+          className="fixed left-6 top-6 z-50 inline-flex items-center justify-center rounded-full border border-accent-primary/30 bg-dark-bg/60 p-3 text-accent-primary backdrop-blur-md transition-colors hover:border-accent-primary/60 hover:bg-dark-card md:hidden"
+          aria-label="Contact me"
+        >
+          <Mail size={20} />
+        </Link>
+
         <motion.div
-          className="absolute left-0 top-0 z-20 flex flex-col gap-6 p-8 md:p-12 lg:p-16"
+          className="absolute left-0 top-0 z-20 hidden flex-col gap-6 p-8 md:flex md:p-12 lg:p-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
