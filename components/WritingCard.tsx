@@ -17,7 +17,6 @@ function sourceLabel(source: WritingSource): string {
 
 export type WritingCardProps = {
   item: Writing;
-  /** Used for staggered entrance animation */
   index?: number;
 };
 
