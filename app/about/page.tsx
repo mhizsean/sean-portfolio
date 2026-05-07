@@ -65,6 +65,22 @@ export default function AboutPage() {
           </p>
 
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6 text-justify">
+            I also volunteer with{" "}
+            <Link
+              href="https://codeyourfuture.io"
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent-primary hover:underline"
+            >
+              Code Your Future
+            </Link>
+            , using my experience to help people break into tech. I support
+            trainees by reviewing code, giving feedback, and helping teach core
+            engineering fundamentals so they can build confidence and ship
+            better work.
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6 text-justify">
             Ultimately, I&apos;m driven by impact, building products that solve
             real problems, improving how users experience technology, and
             continuously growing into a more well-rounded engineer.
