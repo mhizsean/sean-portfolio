@@ -45,5 +45,14 @@ export const writings: Writing[] = [
     excerpt:
       "Accessibility is one of those things most frontend engineers agree is important. But in real projects",
     source: "medium",
-  }
+  },
+  {
+    id: "5",
+    title: "Why Localisation Matters More Than Most Frontend Engineers Think",
+    href: "https://medium.com/@mhizsean/why-localisation-matters-more-than-most-frontend-engineers-think-872d6f9a5dc6",
+    publishedAt: "2026-06-03",
+    excerpt:
+      "When I first heard about localisation in frontend, I assumed it mostly meant translating text...",
+    source: "medium",
+  },
 ];
