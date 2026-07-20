@@ -11,12 +11,42 @@ export interface Project {
     fullStackRepo?: string;
     liveUrl?: string;
     images?: string[];
+    iosLink?: string;
 }
 
 export const projects: Project[] = [
+    {
+  id: 1,
+  title: "TONED",
+  subtitle: "Workout Planning & Tracking App",
+  description:
+    "I built Toned, a mobile workout app for planning a training week and tracking progress over time. Users can set up gym, home, or rest days, build an exercise library from a catalogue of 100+ movements, log sets with weight and reps during sessions, and review history and personal records. The app is offline-first with local persistence, and includes a FastAPI backend with PostgreSQL for exercise data and future sync. Backend in progress with new UI and features for v2",
+  highlight:
+    "Offline-first React Native app with weekly planning, session logging, PR tracking, and a FastAPI + PostgreSQL backend",
+  tools: [
+    "React Native",
+    "Expo",
+    "TypeScript",
+    "Expo Router",
+    "Zustand",
+    "AsyncStorage",
+    "Python (FastAPI)",
+    "PostgreSQL",
+    "SQLAlchemy",
+    "Alembic",
+    "Supabase",
+    "Jest",
+    "Maestro",
+    "EAS",
+  ],
+  type: "Fullstack",
+  frontendRepo: "https://github.com/mhizsean/toned",
+  backendRepo: "https://github.com/mhizsean/toned-backend",
+  iosLink: "https://apps.apple.com/gb/app/toned/id6782617102",
+},
   {
-    id: 1,
-    title: "EDINBURGH TOURSIT GUIDE",
+    id: 2,
+    title: "Viladays",
     subtitle: "Tourist Guide for Edinburgh",
     description:
       "I developed a tourist guide for Edinburgh, Scotland. The guide is a single page application that allows users to explore the city and its attractions. The guide is built with React and Next.js and is hosted on Vercel.",
@@ -38,7 +68,7 @@ export const projects: Project[] = [
     ],
     type: "Fullstack",
     fullStackRepo: "https://github.com/mhizsean/viladays",
-    liveUrl: "https://github.com/mhizsean/viladays",
+    liveUrl: "https://viladays.vercel.app/",
   },
   // {
   //     id: 2,
@@ -63,7 +93,7 @@ export const projects: Project[] = [
   //     liveUrl: '#',
   // },
   {
-    id: 4,
+    id: 3,
     title: "FlowPay",
     subtitle: "Virtual Payments Platform",
     description:
@@ -87,7 +117,8 @@ export const projects: Project[] = [
       "Vercel",
     ],
     type: "Fullstack",
-    fullStackRepo: "https://github.com/mhizsean/flowpay",
+    // fullStackRepo: "https://github.com/mhizsean/flowpay",
     // liveUrl: "https://flowpay.vercel.app",
   },
+
 ];

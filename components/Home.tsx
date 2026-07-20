@@ -194,8 +194,8 @@ export default function Home() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                I build scalable, end-to-end products that deliver real user
-                impact.
+                I love to build scalable, end-to-end products that deliver real
+                user impact.
               </motion.p>
 
               <motion.div

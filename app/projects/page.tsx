@@ -52,7 +52,7 @@ export default function ProjectsPage() {
               {/* Project Content */}
               <div className="flex-1 space-y-6">
                 {/* Project Image Placeholder */}
-                <motion.div
+                {/* <motion.div
                   className="w-full h-64 md:h-80 bg-dark-card rounded-lg border border-dark-border overflow-hidden"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.3 }}
@@ -63,7 +63,7 @@ export default function ProjectsPage() {
                       Image Coming soon...
                     </span>
                   </div>
-                </motion.div>
+                </motion.div> */}
 
                 {/* Project Info */}
                 <div className="space-y-4">
@@ -148,6 +148,18 @@ export default function ProjectsPage() {
                           className="group-hover:translate-x-1 transition-transform"
                         />
                         <span className="text-sm">View Project</span>
+                      </Link>
+                    )}
+                    {project.iosLink && (
+                      <Link
+                        href={project.iosLink}
+                        className="flex items-center gap-2 text-gray-400 hover:text-accent-primary transition-colors group"
+                      >
+                        <ExternalLink
+                          size={18}
+                          className="group-hover:translate-x-1 transition-transform"
+                        />
+                        <span className="text-sm">View on App Store</span>
                       </Link>
                     )}
                   </div>
